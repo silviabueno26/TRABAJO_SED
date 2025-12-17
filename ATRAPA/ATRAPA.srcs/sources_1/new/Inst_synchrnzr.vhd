@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+
 entity SYNCHRNZR is
  port (
     CLK: in std_logic;
@@ -12,7 +13,7 @@ end SYNCHRNZR;
 architecture BEHAVIORAL of SYNCHRNZR is
     signal s_over_flag : std_logic_vector(1 downto 0);
     begin
-process (CLK)
+ process (CLK)
     begin
     
     if rising_edge(CLK) then

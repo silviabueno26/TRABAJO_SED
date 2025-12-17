@@ -75,4 +75,7 @@ INST_EDGEDTCTR2: EDGEDTCTR2
             SYNC_IN2 => sync_right,
             EDGE2 => edge_right
 );
+
+
+
 end Behavioral;
