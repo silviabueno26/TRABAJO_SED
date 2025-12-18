@@ -40,8 +40,18 @@ component SYNCHRNZR_MANZ3 is
             SYNC3_OUT : out std_logic
 );
 end component;
-    
 
+component estados
+Port (
+            clk: in  std_logic;
+            reset : in  std_logic;
+            nivel1: in  std_logic;
+            nivel2: in  std_logic;
+            nivel3: in  std_logic;
+            posicion_manzana: out std_logic_vector(14 downto 0)
+);
+end component;
+    
 begin
 
 INST_SYNCHRNZR_MANZ1: SYNCHRNZR_MANZ1 port map(
@@ -62,4 +72,13 @@ INST_SYNCHRNZR_MANZ3: SYNCHRNZR_MANZ3 port map(
         SYNC3_OUT => sync_l3
 );
 
+INST_ESTADOS: estados port map (
+            clk => clk,
+            reset => reset,
+            nivel1 => sync_l1,
+            nivel2 => sync_l2,
+            nivel3 => sync_l3,
+            posicion_manzana => posicion_manzana
+        );
+        
 end Behavioral;
