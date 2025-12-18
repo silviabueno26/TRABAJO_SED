@@ -46,6 +46,16 @@ component EDGEDTCTR2 is
 );
 end component;
 
+component principal_persona is
+    Port (
+            clk: in  std_logic;
+            btn_left: in  std_logic;
+            btn_right: in  std_logic;
+            rst: in  std_logic;
+            posicion: out std_logic_vector(14 downto 0)
+ );
+end component;
+
 begin
 
 INST_SYNCHRNZR1: SYNCHRNZR
@@ -76,6 +86,14 @@ INST_EDGEDTCTR2: EDGEDTCTR2
             EDGE2 => edge_right
 );
 
-
+INST_PRINCIPAL_PERSONA: principal_persona
+        port map(
+            clk => clk,
+            rst=> reset,
+            btn_left=> edge_left,
+            btn_right=> edge_right,
+            posicion=> posicion
+);
 
 end Behavioral;
+
