@@ -41,6 +41,30 @@ component SYNCHRNZR_MANZ3 is
 );
 end component;
 
+component EDGEDTCTR_MANZ1 is
+    port (
+            CLK: in std_logic;
+            SYNC1_IN : in std_logic;
+            EDGE1 : out std_logic
+ );
+end component;
+
+component EDGEDTCTR_MANZ2 is
+    port (
+            CLK: in std_logic;
+            SYNC2_IN: in std_logic;
+            EDGE2: out std_logic
+ );
+end component;
+
+component EDGEDTCTR_MANZ3 is
+    port (
+            CLK: in std_logic;
+            SYNC3_IN: in std_logic;
+            EDGE3: out std_logic
+ );
+end component;
+
 component estados
 Port (
             clk: in  std_logic;
@@ -72,6 +96,24 @@ INST_SYNCHRNZR_MANZ3: SYNCHRNZR_MANZ3 port map(
         SYNC3_OUT => sync_l3
 );
 
+INST_EDGEDTCTR_MANZ1 : EDGEDTCTR_MANZ1 port map (
+        CLK      => clk,
+        SYNC1_IN => sync_l1,
+        EDGE1    => edge_l1
+);
+
+INST_EDGEDTCTR_MANZ2 : EDGEDTCTR_MANZ2 port map (
+        CLK=> clk,
+        SYNC2_IN => sync_l2,
+        EDGE2=> edge_l2
+);
+
+INST_EDGEDTCTR_MANZ3 : EDGEDTCTR_MANZ3 port map (
+        CLK => clk,
+        SYNC3_IN => sync_l3,
+        EDGE3    => edge_l3
+ );
+ 
 INST_ESTADOS: estados port map (
             clk => clk,
             reset => reset,
