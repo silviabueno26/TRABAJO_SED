@@ -16,6 +16,11 @@ architecture Behavioral of atrapa is
 signal pos_persona : std_logic_vector(14 downto 0);
 signal nivel1_act_s, nivel2_act_s, nivel3_act_s : std_logic;
 signal manzanas: std_logic_vector (14 downto 0);
+signal atrapa_s: std_logic;
+signal decenas_s: std_logic_vector(3 downto 0);
+signal unidades_s: std_logic_vector(3 downto 0);
+signal game_over_s: std_logic;
+signal win_s: std_logic;
 
 Component persona is
     Port (
@@ -39,6 +44,20 @@ Component manzana is
     );
 end component;
 
+Component decoder is
+    Port ( 
+        clk: in std_logic;
+        rst: in std_logic;
+        posicion_persona: in std_logic_vector (14 downto 0);
+        posicion_manzana: in std_logic_vector (14 downto 0);
+        game_over : in std_logic;
+        win: in std_logic;
+        decenas  : in std_logic_vector(3 downto 0); 
+        unidades : in std_logic_vector(3 downto 0); 
+        leds: out std_logic_vector (14 downto 0)
+);
+end component;
+
 begin
 INST_persona: persona Port MAP (
     clk=>clk,
@@ -55,6 +74,18 @@ INST_manzana : manzana port map (
     nivel2 => nivel2_act_s,
     nivel3 => nivel3_act_s,
     posicion_manzana => manzanas
+);
+
+INST_decoder : decoder Port map (
+    clk=> clk,
+    rst=> rst,
+    posicion_persona=> pos_persona,
+    posicion_manzana=> manzanas,
+    game_over => game_over_s,
+    win=> win_s,
+    decenas=> decenas_s,
+    unidades => unidades_s,
+    leds=> Luces
 );
 
 
