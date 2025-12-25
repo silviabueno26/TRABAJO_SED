@@ -17,10 +17,14 @@ signal pos_persona : std_logic_vector(14 downto 0);
 signal nivel1_act_s, nivel2_act_s, nivel3_act_s : std_logic;
 signal manzanas: std_logic_vector (14 downto 0);
 signal atrapa_s: std_logic;
+signal no_atrapa_s : std_logic;
 signal decenas_s: std_logic_vector(3 downto 0);
 signal unidades_s: std_logic_vector(3 downto 0);
 signal game_over_s: std_logic;
 signal win_s: std_logic;
+signal total: std_logic_vector( 14 downto 0);
+signal campeon: std_logic;
+
 
 Component persona is
     Port (
@@ -58,6 +62,19 @@ Component decoder is
 );
 end component;
 
+Component pantalla is
+Port ( 
+        clk: in std_logic;
+        reset: in std_logic;
+        posicion_pantalla:  out std_logic_vector(14 downto 0);
+        level1: in STD_LOGIC;
+        level2: in STD_LOGIC;
+        level3: in STD_LOGIC;
+        win: out std_logic
+        
+);
+end component;
+
 begin
 INST_persona: persona Port MAP (
     clk=>clk,
@@ -88,5 +105,14 @@ INST_decoder : decoder Port map (
     leds=> Luces
 );
 
+INST_pantalla : pantalla port map (
+    clk => clk,
+    reset => rst,
+    posicion_pantalla => total,
+    level1 => level1,
+    level2 => level2,
+    level3 => level3,
+    win => campeon
+);
 
 end Behavioral;
