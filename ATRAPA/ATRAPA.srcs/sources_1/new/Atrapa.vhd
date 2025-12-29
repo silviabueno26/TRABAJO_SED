@@ -75,6 +75,25 @@ Port (
 );
 end component;
 
+Component contador is
+    Port (
+        clk: in  std_logic;
+        rst: in  std_logic;
+        level1: in  std_logic;
+        level2: in  std_logic;
+        level3: in  std_logic;
+        manzanas: in  std_logic_vector(14 downto 0);
+        pos_persona: in  std_logic_vector(14 downto 0);
+        unidades_s: out std_logic_vector(3 downto 0);
+        decenas_s: out std_logic_vector(3 downto 0);
+        game_over_s : out std_logic;
+        win_s: out std_logic;
+        nivel1_act: out std_logic;
+        nivel2_act: out std_logic;
+        nivel3_act: out std_logic
+    );
+end component;
+
 begin
 INST_persona: persona Port MAP (
     clk=>clk,
@@ -113,6 +132,24 @@ INST_pantalla : pantalla port map (
     level2 => level2,
     level3 => level3,
     win => campeon
+);
+
+INST_contador : contador
+port map (
+    clk  => clk,
+    rst => rst,
+    level1 => level1,
+    level2 => level2,
+    level3 => level3,
+    manzanas => manzanas,
+    pos_persona => pos_persona,
+    unidades_s => unidades_s,
+    decenas_s=> decenas_s,
+    game_over_s => game_over_s,
+    win_s => win_s,
+    nivel1_act=> nivel1_act_s,
+    nivel2_act=> nivel2_act_s,
+    nivel3_act=> nivel3_act_s
 );
 
 end Behavioral;

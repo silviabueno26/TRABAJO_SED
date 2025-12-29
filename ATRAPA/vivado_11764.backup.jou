@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Dec 25 18:56:33 2025
+# Process ID: 11764
+# Current directory: C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35428 C:\Users\marta\Documents\GitHub\TRABAJO_SED\ATRAPA\ATRAPA.xpr
+# Log file: C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/vivado.log
+# Journal file: C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA\vivado.jou
+# Running On        :LAPTOP-RO5VL6G7
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :AMD Ryzen 5 5500U with Radeon Graphics         
+# CPU Frequency     :2096 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :7866 MB
+# Swap memory       :16336 MB
+# Total Virtual     :24202 MB
+# Available Virtual :11783 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_pantalla.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_pantalla.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_synchrnzr_level1.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_synchrnzr_level1.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_synchrnzr_level2.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_synchrnzr_level2.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_synchrnzr_level3.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_synchrnzr_level3.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_edgedtctr_level1.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_edgedtctr_level1.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_edgedtctr_level2.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_edgedtctr_level2.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_edgedtctr_level3.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_edgedtctr_level3.vhd
+update_compile_order -fileset sources_1
+close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_pantalla_principal.vhd w ]
+add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_pantalla_principal.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
