@@ -7,6 +7,9 @@ entity atrapa is
         CLK : in  std_logic;
         Button_LEFT : in  std_logic;
         Button_RIGHT : in  std_logic;
+        level1  : in STD_LOGIC;
+        level2 : in STD_LOGIC;
+        level3: in STD_LOGIC;
         rst : in  std_logic;
         Luces : out std_logic_vector(14 downto 0);
         level1: in STD_LOGIC;
