@@ -157,5 +157,6 @@ port map (
     nivel2_act=> nivel2_act_s,
     nivel3_act=> nivel3_act_s
 );
+win <= win_s;
 
 end Behavioral;

@@ -28,3 +28,6 @@ close [ open C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sour
 add_files C:/Users/marta/Documents/GitHub/TRABAJO_SED/ATRAPA/ATRAPA.srcs/sources_1/new/inst_contador.vhd
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
