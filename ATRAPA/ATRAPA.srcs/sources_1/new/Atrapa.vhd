@@ -12,9 +12,6 @@ entity atrapa is
         level3: in STD_LOGIC;
         rst : in  std_logic;
         Luces : out std_logic_vector(14 downto 0);
-        level1: in STD_LOGIC;
-        level2: in STD_LOGIC;
-        level3: in STD_LOGIC;
         win: out std_logic
     );
 end atrapa;
@@ -32,7 +29,6 @@ signal game_over_s: std_logic;
 signal win_s: std_logic;
 signal total: std_logic_vector( 14 downto 0);
 signal campeon: std_logic;
-signal nivel1_act_s, nivel2_act_s, nivel3_act_s : std_logic;
 
 
 Component persona is
