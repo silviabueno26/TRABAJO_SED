@@ -12,9 +12,6 @@ entity atrapa is
         level3: in STD_LOGIC;
         rst : in  std_logic;
         Luces : out std_logic_vector(14 downto 0);
-        level1: in STD_LOGIC;
-        level2: in STD_LOGIC;
-        level3: in STD_LOGIC;
         win: out std_logic
     );
 end atrapa;
@@ -32,7 +29,7 @@ signal game_over_s: std_logic;
 signal win_s: std_logic;
 signal total: std_logic_vector( 14 downto 0);
 signal campeon: std_logic;
-signal nivel1_act_s, nivel2_act_s, nivel3_act_s : std_logic;
+
 
 
 Component persona is
@@ -103,6 +100,17 @@ Component contador is
     );
 end component;
 
+Component comparador 
+    Port(
+        rst: in std_logic;
+        clk: in std_logic;
+        posicion_persona: in std_logic_vector(14 downto 0);
+        posicion_manzana: in std_logic_vector(14 downto 0);
+        no_atrapa: out std_logic;
+        atrapa: out std_logic
+    );   
+ End component;
+
 begin
 INST_persona: persona Port MAP (
     clk=>clk,
@@ -159,6 +167,16 @@ port map (
     nivel1_act=> nivel1_act_s,
     nivel2_act=> nivel2_act_s,
     nivel3_act=> nivel3_act_s
+);
+
+Inst_comparador: comparador port map (
+    rst=> rst,
+    clk => clk,
+    posicion_persona => pos_persona,
+    posicion_manzana => manzanas,
+    no_atrapa => no_atrapa_s,
+    atrapa => atrapa_s
+
 );
 win <= win_s;
 
