@@ -31,7 +31,6 @@ signal total: std_logic_vector( 14 downto 0);
 signal campeon: std_logic;
 
 
-
 Component persona is
     Port (
         clk: in  std_logic;
